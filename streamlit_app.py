@@ -65,7 +65,7 @@ chart2 = alt.Chart(merged_data).transform_fold(
 ).properties(
     title='Total Mass Shooting and School Shootings per Month (Jan 2023 - Sep 2024)',
     width=500,
-    height=300
+    height=400
 )
 
 # Chart 3: Total Mass Shootings per Month
@@ -78,7 +78,7 @@ chart3 = alt.Chart(gun_violence_monthly).mark_line(color='red').encode(
 ).properties(
     title='Total Mass Shootings per Month (2021-2024)',
     width=500,
-    height=300
+    height=400
 )
 
 # Chart 4: Monthly Mass Shootings (Max State vs US Average)
@@ -101,7 +101,7 @@ avg_line = alt.Chart(avg_gun_violence).mark_line(color='darkred').encode(
 chart4 = (max_line + avg_line).properties(
     title='Monthly Mass Shootings (Max State vs US Average)',
     width=500,
-    height=300
+    height=400
 )
 
 # Streamlit Layout
