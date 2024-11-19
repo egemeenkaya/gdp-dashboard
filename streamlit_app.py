@@ -47,8 +47,24 @@ school_shooting_data = pd.concat([
     elementary_shooting_data[['Incident Date', 'State']]
 ])
 start_date, end_date = pd.Timestamp('2023-01-01'), pd.Timestamp('2024-09-30')
-gun_violence_data = gun_violence_data[(gun_violence_data['Incident Date'] >= start_date) & (gun_violence_data['Incident Date'] <= end_date)]
-school_shooting_data = school_shooting_data[(school_shooting_data['Incident Date'] >= start_date) & (school_shooting_data['Incident Date'] <= end_date)]
+
+years = st.slider(
+    "Select Date Range for Mass Shootings (Max State vs US Average)",
+    min_value=pd.Timestamp('2021-01-01').date(),
+    max_value=pd.Timestamp('2024-01-01').date(),
+    value=(pd.Timestamp('2023-01-01').date(), pd.Timestamp('2023-12-31').date()),  # Default range
+    format="YYYY-MM-DD"
+)
+
+# Filter data based on the selected date range
+filtered_data = gun_violence_data[
+    (gun_violence_data['Incident Date'].dt.date >= years[0]) &
+    (gun_violence_data['Incident Date'].dt.date <= years[1])
+]
+
+
+#gun_violence_data = gun_violence_data[(gun_violence_data['Incident Date'] >= start_date) & (gun_violence_data['Incident Date'] <= end_date)]
+#school_shooting_data = school_shooting_data[(school_shooting_data['Incident Date'] >= start_date) & (school_shooting_data['Incident Date'] <= end_date)]
 gun_violence_data['Month'] = gun_violence_data['Incident Date'].dt.to_period('M').dt.to_timestamp()
 school_shooting_data['Month'] = school_shooting_data['Incident Date'].dt.to_period('M').dt.to_timestamp()
 gun_violence_monthly = gun_violence_data.groupby('Month').size().reset_index(name='Mass Shootings')
