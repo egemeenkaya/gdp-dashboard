@@ -3,10 +3,10 @@ import pandas as pd
 import altair as alt
 
 # Load the data
-population_data = pd.read_csv("/gdp-dashboard/data/Population.csv")
-gun_violence_data = pd.read_csv("/gdp-dashboard/data/GunViolenceAllYears.csv")
-high_shooting_data = pd.read_csv("/gdp-dashboard/data/High.csv")
-elementary_shooting_data = pd.read_csv("/gdp-dashboard/data/Elementary.csv")
+population_data = pd.read_csv("data/Population.csv")
+gun_violence_data = pd.read_csv("data/GunViolenceAllYears.csv")
+high_shooting_data = pd.read_csv("data/High.csv")
+elementary_shooting_data = pd.read_csv("data/Elementary.csv")
 
 # Chart 1: Mass Shootings per Million Residents by State
 state_population_data = population_data.rename(columns={'NAME': 'State', 'POPESTIMATE': 'Population'})
