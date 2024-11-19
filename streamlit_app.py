@@ -36,7 +36,7 @@ start_date_slider, end_date_slider = st.slider(
     format="YYYY-MM-DD"
 )
 
-# Filter data based on the selected date range
+# Filter the data based on the selected date range
 gun_violence_data_filtered = gun_violence_data[
     (gun_violence_data['Incident Date'] >= start_date_slider) & 
     (gun_violence_data['Incident Date'] <= end_date_slider)
@@ -45,8 +45,6 @@ school_shooting_data_filtered = school_shooting_data[
     (school_shooting_data['Incident Date'] >= start_date_slider) & 
     (school_shooting_data['Incident Date'] <= end_date_slider)
 ]
-
-# You can now use the filtered data for your charts.
 
 
 chart1 = alt.Chart(merged_data).mark_bar().encode(
