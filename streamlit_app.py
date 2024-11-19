@@ -48,9 +48,10 @@ school_shooting_data = pd.concat([
 ])
 
 start_date, end_date = pd.Timestamp('2021-01-01'), pd.Timestamp('2024-09-30')
+start_date_school = pd.Timestamp('2023-01-01')
 
 gun_violence_data = gun_violence_data[(gun_violence_data['Incident Date'] >= start_date) & (gun_violence_data['Incident Date'] <= end_date)]
-school_shooting_data = school_shooting_data[(school_shooting_data['Incident Date'] >= start_date) & (school_shooting_data['Incident Date'] <= end_date)]
+school_shooting_data = school_shooting_data[(school_shooting_data['Incident Date'] >= start_date_school) & (school_shooting_data['Incident Date'] <= end_date)]
 gun_violence_data['Month'] = gun_violence_data['Incident Date'].dt.to_period('M').dt.to_timestamp()
 school_shooting_data['Month'] = school_shooting_data['Incident Date'].dt.to_period('M').dt.to_timestamp()
 gun_violence_monthly = gun_violence_data.groupby('Month').size().reset_index(name='Mass Shootings')
