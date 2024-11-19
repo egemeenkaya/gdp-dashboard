@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 
+st.set_page_config(page_title="Gun Violence Analysis", layout="wide")
+
 # Load the data
 population_data = pd.read_csv("data/Population.csv")
 gun_violence_data = pd.read_csv("data/GunViolenceAllYears.csv")
