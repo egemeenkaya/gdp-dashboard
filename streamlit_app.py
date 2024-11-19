@@ -6,16 +6,18 @@ import altair as alt
 st.set_page_config(page_title="Gun Violence Analysis", layout="wide")
 
 # Load the data (adjust paths as needed)
-population_data = pd.read_csv("data/Population.csv")
 gun_violence_data = pd.read_csv("data/GunViolenceAllYears.csv")
-high_shooting_data = pd.read_csv("data/High.csv")
-elementary_shooting_data = pd.read_csv("data/Elementary.csv")
 
 # Convert incident dates to datetime
 gun_violence_data['Incident Date'] = pd.to_datetime(gun_violence_data['Incident Date']).dt.tz_localize(None)
 
-# 4th chart - Monthly Mass Shootings with Max State vs US Average
-# Date range slider (mimicking the same logic from the movie dataset)
+# Ensure that 'Month' is extracted from 'Incident Date'
+gun_violence_data['Month'] = gun_violence_data['Incident Date'].dt.month_name()
+
+# Check if 'State' column exists, or if it needs renaming
+st.write(gun_violence_data.columns)  # Check column names
+
+# Set a default slider range (Jan 2021 - Jan 2024)
 years = st.slider(
     "Select Date Range for Mass Shootings (Max State vs US Average)",
     min_value=pd.Timestamp('2021-01-01').date(),
@@ -29,6 +31,9 @@ filtered_data = gun_violence_data[
     (gun_violence_data['Incident Date'].dt.date >= years[0]) &
     (gun_violence_data['Incident Date'].dt.date <= years[1])
 ]
+
+# Check if 'State' and 'Month' columns exist after filtering
+st.write(filtered_data.columns)  # Verify if the 'State' and 'Month' columns are present
 
 # Group data by month and state for the filtered data
 monthly_data = filtered_data.groupby(['Month', 'State']).size().reset_index(name='Mass Shootings Max')
@@ -62,14 +67,5 @@ chart4 = (max_line + avg_line).properties(
 # Streamlit Layout
 st.title("Gun Violence Analysis Dashboard")
 
-# Add the 4th chart with the date range slider logic
-col1, col2 = st.columns(2)
-
-with col1:
-    # Display other charts if needed
-    st.altair_chart(chart1, use_container_width=True)
-    st.altair_chart(chart2, use_container_width=True)
-
-with col2:
-    # Display 4th chart with the date slider
-    st.altair_chart(chart4, use_container_width=True)  # 4th chart with date slider
+# Display 4th chart with the date slider
+st.altair_chart(chart4, use_container_width=True)
