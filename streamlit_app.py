@@ -27,14 +27,6 @@ average_row = pd.DataFrame({
 })
 merged_data = pd.concat([merged_data, average_row], ignore_index=True)
 
-start_date_slider, end_date_slider = st.slider(
-    "Select Start Date for Analysis",
-    min_value=pd.Timestamp('2021-01-01'),
-    max_value=pd.Timestamp('2024-01-01'),
-    value=pd.Timestamp('2023-01-01'),
-    format="YYYY-MM-DD",
-)
-
 chart1 = alt.Chart(merged_data).mark_bar().encode(
     x=alt.X('Incidents per Million:Q', title='Incidents per Million Residents'),
     y=alt.Y('State:O', sort='-x', title='State'),
