@@ -1,0 +1,342 @@
+Incident ID,Incident Date,State,City Or County,Address,Victims Killed,Victims Injured,Suspects Killed,Suspects Injured
+2983511,2024-07-30T00:00:00Z,Oregon,Klamath Falls,1300 Monclaire St,0,1,0,0
+2979381,2024-07-19T00:00:00Z,Washington,Tacoma,601 S 8th St,0,0,0,0
+2965629,2024-07-09T00:00:00Z,Texas,Greenville,3515 Lions Lair Rd,0,0,0,0
+2939422,2024-06-13T00:00:00Z,California,Los Angeles,111 S Grand Ave,0,0,0,0
+2937049,2024-06-07T00:00:00Z,California,Carson,22328 Main St,0,0,0,0
+2933178,2024-06-06T00:00:00Z,Washington,Seattle,400 23rd Ave,1,0,0,0
+2923298,2024-05-28T00:00:00Z,Oregon,Portland,6941 N Central St,0,0,0,0
+2921380,2024-05-25T00:00:00Z,Iowa,Des Moines,2601 Forest Ave,0,0,0,0
+2921138,2024-05-24T00:00:00Z,New Mexico,Anthony,6301 NM-28,1,0,0,0
+2918499,2024-05-23T00:00:00Z,Louisiana,Harvey,2200 8th St,0,1,0,0
+2919743,2024-05-23T00:00:00Z,California,Oakland,12250 Skyline Blvd,0,2,0,1
+2917915,2024-05-22T00:00:00Z,Florida,Citra,2085 W Hwy 329,1,0,0,0
+2917502,2024-05-21T00:00:00Z,California,Palermo,Ontario Ave,0,0,0,0
+2914448,2024-05-19T00:00:00Z,Missouri,Cape Girardeau,1333 N Sprigg St,0,2,0,0
+2906653,2024-05-11T00:00:00Z,California,Los Angeles,3751 S Harvard Blvd,0,1,0,0
+2905771,2024-05-10T00:00:00Z,Texas,Houston,4410 Cook Rd,0,1,0,0
+2905536,2024-05-10T00:00:00Z,Virginia,Richmond,2020 Westwood Ave,0,1,0,0
+2905343,2024-05-08T00:00:00Z,Florida,Lake Worth,6300 Seminole Dr,0,0,0,1
+2904093,2024-05-07T00:00:00Z,North Carolina,Winston Salem,1600 Brewer Rd,0,1,0,0
+2900579,2024-05-04T00:00:00Z,South Carolina,North Charleston,1087 E Montague Ave,0,0,0,0
+2899493,2024-05-03T00:00:00Z,District of Columbia,Washington,101 N St NW,0,1,0,0
+2899387,2024-05-03T00:00:00Z,Maryland,Annapolis,911 Royal St,0,3,0,0
+2899368,2024-05-03T00:00:00Z,Georgia,Decatur,310 N McDonough St,0,0,0,0
+2896521,2024-05-01T00:00:00Z,Wisconsin,Mount Horeb,900 E Garfield St,0,0,1,0
+2889123,2024-04-24T00:00:00Z,Texas,Arlington,2101 Highbank Dr,1,0,0,0
+2887245,2024-04-22T00:00:00Z,Florida,Palm Beach Gardens,1717 Ave S,0,0,0,1
+2887847,2024-04-22T00:00:00Z,Washington,West Richland,2820 S Highlands Blvd,2,0,1,0
+2881689,2024-04-16T00:00:00Z,North Carolina,Concord,7550 Ruben Linker Rd NW,1,0,0,0
+2881329,2024-04-15T00:00:00Z,Louisiana,Jennings,2310 N Sherman St,0,0,0,0
+2877775,2024-04-12T00:00:00Z,Texas,Dallas,5520 Langdon Rd,0,1,0,0
+2869592,2024-04-02T00:00:00Z,Massachusetts,Cambridge,459 Broadway Ct,0,0,0,0
+2863281,2024-03-26T00:00:00Z,Missouri,Charleston,606 S Thorn St,0,0,0,0
+2852763,2024-03-13T00:00:00Z,Washington,Seattle,E Jefferson St and 23rd Ave,0,1,0,0
+2850638,2024-03-11T00:00:00Z,Massachusetts,Springfield,1250 State St,0,0,0,0
+2845888,2024-03-05T00:00:00Z,Indiana,Indianapolis,7510 E 53rd St,0,1,0,0
+2843300,2024-03-02T00:00:00Z,Indiana,Rochester,1645 S Park Rd,0,0,0,0
+2843527,2024-03-02T00:00:00Z,Missouri,Kansas City,620 E 23rd Ave,0,2,0,0
+2842890,2024-03-01T00:00:00Z,Louisiana,Carencro,200 block of Bradford Dr,1,0,0,0
+2842712,2024-02-29T00:00:00Z,Florida,Jacksonville,590 Duval Station Rd,0,0,0,0
+2840561,2024-02-27T00:00:00Z,Delaware,Georgetown,26026 Patriots Way,0,0,0,0
+2838533,2024-02-26T00:00:00Z,Texas,Odessa,1301 Dotsy Ave,0,1,0,0
+2836786,2024-02-23T00:00:00Z,West Virginia,Bluefield,2915 Old Bramwell Rd,0,1,0,0
+2835770,2024-02-21T00:00:00Z,Texas,Edinburg,1414 N Alamo Rd,0,0,0,0
+2834943,2024-02-20T00:00:00Z,Michigan,Saginaw,3100 Webber St,0,0,0,0
+2833248,2024-02-19T00:00:00Z,Texas,Mesquite,3200 Oates Dr,0,0,0,1
+2828898,2024-02-14T00:00:00Z,Georgia,Atlanta,3450 Benjamin E Mays Dr SW,0,4,0,0
+2825090,2024-02-09T00:00:00Z,Georgia,Atlanta,2575 Harris St,1,0,0,0
+2823618,2024-02-07T00:00:00Z,Oregon,Eugene,1125 Willagillespie Rd,0,0,0,0
+2820511,2024-02-05T00:00:00Z,Georgia,Augusta,1339 Laney Walker Blvd,0,0,0,0
+2816899,2024-02-01T00:00:00Z,Georgia,Powder Springs,2400 New MacLand Rd SW,0,2,0,0
+2816815,2024-02-01T00:00:00Z,South Carolina,Conway,8th Ave and Rufus St,1,0,0,0
+2815006,2024-01-30T00:00:00Z,California,Sacramento,1400 Grand Ave,0,1,0,0
+2815093,2024-01-30T00:00:00Z,Alabama,Mobile,700 Donald St,0,2,0,0
+2815736,2024-01-29T00:00:00Z,Texas,Austin,13212 N Lamar Blvd,0,1,0,0
+2812497,2024-01-26T00:00:00Z,Alabama,Bessemer,4881 15th Street Rd,0,0,0,0
+2804817,2024-01-18T00:00:00Z,Minnesota,Saint Paul,780 W Wheelock Pkwy,0,0,0,1
+2804326,2024-01-17T00:00:00Z,Indiana,Gary,725 Clark Road,0,0,0,0
+2803676,2024-01-17T00:00:00Z,Maryland,Ellicott City,4465 Montgomery Rd,1,0,0,0
+2800627,2024-01-12T00:00:00Z,Ohio,Dayton,2021 W 3rd St,1,0,0,0
+2868032,2024-01-12T00:00:00Z,Virginia,Moneta,1203 Timberwood Ln,0,0,0,1
+2800126,2024-01-11T00:00:00Z,Florida,Miami,1100 NW 71st St,0,1,0,0
+2794194,2024-01-04T00:00:00Z,Iowa,Perry,1200 18th St,2,5,1,0
+2783694,2023-12-18T00:00:00Z,Indiana,Hammond,5825 S Blaine Ave,0,0,0,0
+2777738,2023-12-12T00:00:00Z,Michigan,Kalamazoo,2107 N 26th St,0,0,0,0
+2774956,2023-12-08T00:00:00Z,New Mexico,Albuquerque,10800 Dennis Chavez Blvd SW,1,0,0,0
+2776395,2023-12-07T00:00:00Z,New York,Albany,600 New Scotland Ave,0,0,0,0
+2771255,2023-12-05T00:00:00Z,Texas,Austin,7104 Berkman Dr,6,3,0,0
+2768312,2023-12-01T00:00:00Z,Ohio,Cincinnati,1620 Galbraith Rd,0,1,0,0
+2756292,2023-11-14T00:00:00Z,Illinois,Peoria,811 S Griswold St,0,0,0,0
+2754154,2023-11-13T00:00:00Z,New Jersey,Newark,246 18th Ave,0,1,0,0
+2752997,2023-11-10T00:00:00Z,California,Vallejo,840 Nebraska St,0,1,0,0
+2752833,2023-11-09T00:00:00Z,Alabama,Atmore,1215 S Presley St,0,2,0,0
+2746669,2023-11-03T00:00:00Z,Indiana,Indianapolis,2255 Ralston Ave,1,0,0,0
+2746708,2023-10-30T00:00:00Z,North Carolina,Raleigh,1830 Walnut View Rd,0,0,0,0
+2741694,2023-10-28T00:00:00Z,Texas,San Antonio,8400 N Loop 1604 W,0,0,0,1
+2741317,2023-10-27T00:00:00Z,Maryland,Baltimore,2201 Presstman St,0,1,0,2
+2742361,2023-10-27T00:00:00Z,California,South Gate,5225 Tweedy Blvd,0,0,0,0
+2740473,2023-10-26T00:00:00Z,California,South Gate,5225 Tweedy Blvd,0,0,0,1
+2741346,2023-10-26T00:00:00Z,Vermont,Montpelier,Home Farm Way and E Montpelier Rd,0,0,0,0
+2738207,2023-10-25T00:00:00Z,Ohio,Cincinnati,3280 River Rd,1,1,0,0
+2737554,2023-10-24T00:00:00Z,Maryland,Gwynn Oak,1600 Langford Rd,0,1,0,0
+2736706,2023-10-23T00:00:00Z,Wisconsin,Germantown,N118 W15860 Williams Dr,0,0,1,0
+2734591,2023-10-20T00:00:00Z,Florida,Tampa,13912 Nine Eagles Dr,1,0,0,0
+2734135,2023-10-19T00:00:00Z,Washington,Vancouver,14300 NE 18th St,0,0,0,0
+2730430,2023-10-15T00:00:00Z,Texas,Denton,815 Cross Timber St,1,1,0,0
+2731875,2023-10-15T00:00:00Z,Missouri,Saint Louis,11287 Manchester Rd,0,0,0,0
+2728346,2023-10-11T00:00:00Z,Texas,Fort Worth,4200 Dorsey St,1,0,0,0
+2733642,2023-10-06T00:00:00Z,Louisiana,Thibodaux,1355 Tiger Dr,0,0,0,0
+2725139,2023-10-06T00:00:00Z,Michigan,Oak Park,13701 Oak Park Blvd,0,2,0,0
+2723032,2023-10-04T00:00:00Z,Washington,Seattle,400 23rd Ave,0,0,0,0
+2724785,2023-10-04T00:00:00Z,Pennsylvania,East Stroudsburg,5180 Milford Rd,0,0,0,0
+2720457,2023-09-30T00:00:00Z,Tennessee,Jackson,179 Allen Ave,0,2,0,0
+2719899,2023-09-30T00:00:00Z,Georgia,Griffin,310 E Poplar St,1,0,0,0
+2719783,2023-09-29T00:00:00Z,North Carolina,Greensboro,1200 Lincoln St,1,1,0,0
+2718191,2023-09-28T00:00:00Z,Georgia,Columbus,1136 Hunt Ave,0,0,0,1
+2715607,2023-09-25T00:00:00Z,Maryland,Baltimore,1400 Orleans St,0,0,0,1
+2707880,2023-09-15T00:00:00Z,Illinois,Country Club Hills,17401 Pulaski Rd,1,0,0,0
+2704999,2023-09-12T00:00:00Z,Louisiana,Greensburg,14340 Highway 37,1,2,0,0
+2704977,2023-09-12T00:00:00Z,New York,Bronx,328 Beekman Ave,0,1,0,0
+2704467,2023-09-11T00:00:00Z,Arkansas,North Little Rock,801 W 29th St,0,0,0,0
+2702961,2023-09-09T00:00:00Z,New York,Utica,1203 Hilton Ave,0,1,0,0
+2701976,2023-09-08T00:00:00Z,Washington,Everett,7701 Hardeson Rd,1,0,0,0
+2702298,2023-09-08T00:00:00Z,North Carolina,Lumberton,3901 Fayetteville Rd,0,0,0,0
+2699496,2023-09-05T00:00:00Z,California,Oakland,12250 Skyline Blvd,0,0,0,0
+2696970,2023-09-01T00:00:00Z,Louisiana,Port Allen,3553 Rosedale Rd,1,1,0,0
+2690901,2023-08-25T00:00:00Z,Oklahoma,Choctaw,14300 NE 10th St,1,2,0,0
+2691013,2023-08-25T00:00:00Z,California,Los Angeles,300 E 53rd St,0,1,0,0
+2691060,2023-08-25T00:00:00Z,South Carolina,Georgetown,2500 Anthuan Maybank Dr,0,0,0,0
+2688223,2023-08-22T00:00:00Z,Texas,Seguin,215 Short Ave,0,0,0,0
+2685344,2023-08-18T00:00:00Z,Georgia,Jonesboro,1055 Battle Creek Rd,0,1,0,0
+2685465,2023-08-18T00:00:00Z,Florida,Jacksonville,590 Duval Station Rd,0,0,0,1
+2685802,2023-08-18T00:00:00Z,California,Rancho Cucamonga,13500 Victoria St,0,1,0,0
+2682566,2023-08-16T00:00:00Z,Georgia,Augusta,1701 15th St,0,1,0,0
+2663163,2023-07-25T00:00:00Z,Tennessee,Memphis,778 Parkrose Rd,0,1,0,0
+2635020,2023-06-23T00:00:00Z,New Mexico,Albuquerque,721 Tomasita St NE,0,1,0,0
+2621053,2023-06-09T00:00:00Z,District of Columbia,Washington,3264 Stanton Rd SE,0,1,0,0
+2618358,2023-06-06T00:00:00Z,Virginia,Richmond,6 N Laurel St,2,5,0,0
+2606670,2023-05-24T00:00:00Z,North Carolina,Greenville,600 W Arlington Blvd,0,1,0,0
+2606723,2023-05-24T00:00:00Z,Pennsylvania,Pittsburgh,2323 Brighton Rd,1,0,0,0
+2605406,2023-05-22T00:00:00Z,Massachusetts,Danvers,72 Spring St,0,0,0,0
+2600771,2023-05-17T00:00:00Z,District of Columbia,Washington,4301 13th St NW,1,0,0,0
+2603652,2023-05-16T00:00:00Z,New Jersey,Paterson,322 10th Ave,0,0,0,0
+2596876,2023-05-12T00:00:00Z,Tennessee,Lenoir City,1485 Old Hwy 95,1,0,0,0
+2591797,2023-05-08T00:00:00Z,Nevada,Las Vegas,2436 N Pecos Rd,0,1,0,0
+2592366,2023-05-08T00:00:00Z,Pennsylvania,Philadelphia,2900 W Clearfield St,0,0,0,0
+2585980,2023-05-01T00:00:00Z,Michigan,Flint,2820 Saginaw St,0,1,0,0
+2585445,2023-04-30T00:00:00Z,California,Palmdale,37423 70th St. East,0,0,0,0
+2583557,2023-04-28T00:00:00Z,Tennessee,Knoxville,3300 Sutherland Ave,0,1,0,0
+2582779,2023-04-27T00:00:00Z,Virginia,Richmond,4314 Crutchfield St,0,2,0,0
+2580098,2023-04-24T00:00:00Z,Texas,Roscoe,700 Elm St,1,0,0,0
+2571080,2023-04-07T00:00:00Z,North Carolina,Greenville,N/A,0,1,0,0
+2565916,2023-04-06T00:00:00Z,North Carolina,Winterville,570 Forlines Rd,0,1,0,0
+2555459,2023-03-27T00:00:00Z,Tennessee,Nashville,33 Burton Hills Blvd,6,0,1,0
+2555815,2023-03-24T00:00:00Z,Indiana,Middlebury,56691 Northridge Dr,1,0,0,0
+2551754,2023-03-22T00:00:00Z,Colorado,Denver,1600 City Park Esplanade,0,2,1,0
+2552490,2023-03-22T00:00:00Z,Alabama,Anniston,1301 Woodstock Ave,0,1,0,0
+2551555,2023-03-21T00:00:00Z,Texas,Dallas,4001 Walnut Hill Ln,0,1,0,0
+2549957,2023-03-20T00:00:00Z,Texas,Arlington,1400 W Lamar Blvd,1,0,0,0
+2542086,2023-03-07T00:00:00Z,Indiana,Indianapolis,4900 Julian Ave,1,0,0,0
+2540056,2023-03-06T00:00:00Z,Michigan,Roseville,16250 Martin Rd,0,1,0,0
+2541039,2023-03-05T00:00:00Z,Georgia,Atlanta,688 Beckwith St SW,0,0,0,0
+2528206,2023-02-15T00:00:00Z,Ohio,Cleveland,15210 St Clair Ave,0,0,0,0
+2525382,2023-02-14T00:00:00Z,Pennsylvania,Pittsburgh,1101 N Murtland St,0,4,0,0
+2524633,2023-02-13T00:00:00Z,Texas,Dalhart,2100 Spirit Trl,1,0,0,0
+2516840,2023-02-02T00:00:00Z,Ohio,Pickerington,130 Hill Rd S,1,0,0,0
+2513755,2023-01-28T00:00:00Z,Missouri,Springfield,2500 block of S Linden Ave,0,1,0,0
+2510590,2023-01-24T00:00:00Z,Missouri,Kansas City,3930 Broadway Blvd,0,1,0,0
+2511172,2023-01-24T00:00:00Z,Ohio,Toledo,2000 block of Avondale Ave,0,0,0,0
+2509254,2023-01-23T00:00:00Z,Iowa,Des Moines,455 SW Fifth St,2,1,0,0
+2506942,2023-01-20T00:00:00Z,Minnesota,Saint Paul,1495 Rice St,0,1,0,0
+2506753,2023-01-19T00:00:00Z,New York,Brooklyn,1137 Herkimer St,0,1,0,0
+2504792,2023-01-17T00:00:00Z,Oklahoma,Oklahoma City,1900 S Sunnylane Rd,0,1,0,0
+2500542,2023-01-10T00:00:00Z,Kentucky,Stanford,101 Old Fort Rd,0,1,0,0
+2497956,2023-01-07T00:00:00Z,Oregon,Portland,5405 SE Woodward St,0,1,0,0
+2497541,2023-01-06T00:00:00Z,Florida,Apopka,2501 Hiawassee Rd,0,1,0,0
+2497580,2023-01-06T00:00:00Z,Michigan,Oak Park,13701 Oak Park Blvd,0,1,0,0
+2496849,2023-01-06T00:00:00Z,Virginia,Newport News,205 Tyner Dr,0,1,0,0
+2482288,2022-12-16T00:00:00Z,Illinois,Chicago,2150 S Laflin St,2,2,0,0
+2479782,2022-12-12T00:00:00Z,Oregon,Portland,3400 SE 26th Ave,0,1,0,0
+2476687,2022-12-08T00:00:00Z,Maryland,District Heights,5200 Silver Hill Rd,0,1,0,0
+2475818,2022-12-07T00:00:00Z,Missouri,Saint Louis,310 N 15th St,0,0,0,1
+2474827,2022-12-05T00:00:00Z,Tennessee,Memphis,817 Brownlee Rd,0,1,0,0
+2471637,2022-11-30T00:00:00Z,California,Mariposa,5005 Frank Wilson Rd,0,0,1,0
+2465032,2022-11-21T00:00:00Z,Michigan,Detroit,20000 Evergreen Rd,0,2,0,0
+2461545,2022-11-17T00:00:00Z,Indiana,Clinton,776 Wildcat Dr,0,1,0,0
+2461242,2022-11-16T00:00:00Z,North Carolina,Lumberton,3901 Fayetteville Rd,0,1,0,0
+2461344,2022-11-15T00:00:00Z,Louisiana,Ball,89 Camp Livingston Rd,0,0,0,2
+2459606,2022-11-14T00:00:00Z,Virginia,Petersburg,Lincoln St and Grant Ave,0,2,0,0
+2458602,2022-11-12T00:00:00Z,Florida,Orlando,801 Rio Grande Ave,1,2,0,0
+2457046,2022-11-09T00:00:00Z,Kentucky,Caneyville,521 E Maple St,0,1,0,0
+2455465,2022-11-08T00:00:00Z,Washington,Seattle,1819 N 135th St,1,0,0,0
+2450914,2022-11-02T00:00:00Z,District of Columbia,Washington,4301 13th St NW,0,0,0,0
+2447786,2022-10-28T00:00:00Z,North Carolina,Teachey,602 High School Rd,0,0,0,0
+2445790,2022-10-26T00:00:00Z,West Virginia,Augusta,Mack Rd and St Peter Ln,0,0,1,0
+2445239,2022-10-25T00:00:00Z,Alabama,Huntsville,4010 Binderton Pl SW,0,0,0,0
+2444523,2022-10-24T00:00:00Z,Georgia,Snellville,4210 Shiloh Rd,0,0,0,0
+2443879,2022-10-24T00:00:00Z,Missouri,Saint Louis,3125 S Kingshighway Blvd,2,4,1,0
+2442995,2022-10-21T00:00:00Z,California,Sacramento,1400 Grand Ave,1,0,0,0
+2440416,2022-10-18T00:00:00Z,Oregon,Portland,N Emerson St and Commercial Ave,0,2,0,0
+2437552,2022-10-14T00:00:00Z,Virginia,Richmond,1211 Jahnke Rd,1,0,0,0
+2437741,2022-10-14T00:00:00Z,Louisiana,Bogalusa,100 M J Israel Dr,1,0,0,0
+2436505,2022-10-13T00:00:00Z,Texas,Dallas,2121 Tosca Ln,0,0,0,0
+2436115,2022-10-12T00:00:00Z,North Carolina,Cary,638 Walnut St,0,0,0,0
+2435436,2022-10-11T00:00:00Z,Kansas,Salina,730 E Magnolia Rd,0,0,0,0
+2435505,2022-10-11T00:00:00Z,Alabama,Birmingham,2101 Jefferson Ave SW,0,1,0,0
+2434860,2022-10-10T00:00:00Z,Wisconsin,Milwaukee,8135 W Florist Ave,0,0,0,1
+2435330,2022-10-08T00:00:00Z,Kansas,Kansas City,2400 Steele Rd,0,0,0,0
+2432745,2022-10-07T00:00:00Z,Ohio,Toledo,5 Whitmer Dr,0,3,0,0
+2433751,2022-10-07T00:00:00Z,Michigan,Battle Creek,62 Champion St,0,0,0,0
+2432879,2022-10-07T00:00:00Z,Arizona,Phoenix,3333 W Roosevelt St,0,0,0,0
+2432107,2022-10-06T00:00:00Z,Ohio,Columbus,1265 Koebel Rd,0,0,0,0
+2430247,2022-10-04T00:00:00Z,Massachusetts,Boston,60 Washington St,0,1,0,0
+2430002,2022-10-03T00:00:00Z,Michigan,Oxford,1420 Lakeville Rd,0,0,0,0
+2427775,2022-09-30T00:00:00Z,Oklahoma,Tulsa,4929 N Peoria Ave,1,3,0,0
+2427753,2022-09-30T00:00:00Z,New York,Newburgh,201 Fullerton Ave,0,3,0,0
+2427532,2022-09-30T00:00:00Z,Virginia,Richmond,900 block of McDowell Rd,0,1,0,0
+2426042,2022-09-28T00:00:00Z,California,Oakland,8251 Fontaine St,1,5,0,0
+2425199,2022-09-27T00:00:00Z,Pennsylvania,Philadelphia,6498 Ridge Ave,1,4,0,0
+2424019,2022-09-26T00:00:00Z,Georgia,Valdosta,1400 block of Laura St,0,1,0,0
+2430034,2022-09-26T00:00:00Z,Michigan,Oxford,930 E Drahner Rd,0,0,0,0
+2427129,2022-09-26T00:00:00Z,Georgia,Valdosta,1400 block of Weaver St,0,1,0,0
+2422470,2022-09-23T00:00:00Z,Minnesota,Minneapolis,401 W 70th St,0,1,0,0
+2420693,2022-09-20T00:00:00Z,Minnesota,Mankato,1351 S Riverfront Dr,0,1,0,0
+2421084,2022-09-20T00:00:00Z,Indiana,South Bend,400 block of Teri St,0,0,0,0
+2419520,2022-09-19T00:00:00Z,Florida,Stuart,1400 SE Cove Rd,0,0,0,0
+2419196,2022-09-19T00:00:00Z,Louisiana,Harvey,2800 block of Manhattan Blvd,0,0,0,0
+2417557,2022-09-17T00:00:00Z,Georgia,Augusta,1701 15th St,0,2,0,0
+2416927,2022-09-16T00:00:00Z,Georgia,Augusta,1339 Laney Walker Blvd,0,0,0,0
+2415376,2022-09-14T00:00:00Z,Ohio,Circleville,1476 Lancaster Pike,0,0,0,0
+2414059,2022-09-13T00:00:00Z,California,Vallejo,840 Nebraska St,0,1,0,0
+2414785,2022-09-13T00:00:00Z,Maryland,Oxon Hill,6701 Leyte Dr,0,1,0,0
+2409745,2022-09-08T00:00:00Z,Florida,Miami,11100 block of NW 8th Ave,0,2,0,0
+2407883,2022-09-06T00:00:00Z,Alabama,Daphne,1030 Stanton Rd,0,0,0,0
+2405467,2022-09-02T00:00:00Z,Maryland,Baltimore,3500 Hillen Rd,1,0,0,0
+2401110,2022-08-29T00:00:00Z,California,Oakland,400 Capistrano Dr,0,1,0,0
+2399318,2022-08-27T00:00:00Z,Missouri,Saint Louis,6701 St Charles Rock Rd,0,0,0,0
+2397552,2022-08-25T00:00:00Z,Indiana,Greenwood,Providence Dr and Winterwood Dr,1,0,0,0
+2396035,2022-08-23T00:00:00Z,Ohio,Toledo,707 Woodsdale Ave,0,0,0,0
+2392914,2022-08-19T00:00:00Z,Tennessee,Clarksville,1210 W Creek Coyote Trail,0,0,0,0
+2392641,2022-08-19T00:00:00Z,Ohio,Groveport,4475 S Hamilton Rd,0,0,0,0
+2391423,2022-08-18T00:00:00Z,Florida,Ruskin,2342 E Shell Point Rd,0,1,0,0
+2392483,2022-08-17T00:00:00Z,Illinois,Kankakee,1200 W Jeffery St,0,1,0,0
+2389886,2022-08-16T00:00:00Z,Florida,Fort Pierce,4101 S 25th St,1,0,0,0
+2383797,2022-08-10T00:00:00Z,Georgia,Mcdonough,155 Post Master Dr,0,0,0,0
+2380419,2022-08-05T00:00:00Z,Georgia,Wrightsville,150 Herschel Walker Dr,0,0,0,0
+2382465,2022-08-05T00:00:00Z,Massachusetts,Lynn,100 Brookline St,0,0,0,0
+2352435,2022-07-06T00:00:00Z,Illinois,Chicago,3937 W Wilcox St,0,2,0,0
+2332280,2022-06-15T00:00:00Z,Georgia,Decatur,5341 Snapfinger Park Dr,1,0,0,0
+2325672,2022-06-09T00:00:00Z,Alabama,Gadsden,3200 Walnut St,0,0,1,0
+2322223,2022-06-05T00:00:00Z,Indiana,Gary,1 Stadium Plaza,0,2,0,0
+2318430,2022-06-01T00:00:00Z,California,Van Nuys,13000 Oxnard St,0,1,0,0
+2317044,2022-05-31T00:00:00Z,Louisiana,New Orleans,7900 Stroelitz St,1,2,0,0
+2312998,2022-05-26T00:00:00Z,Texas,Arlington,3100 Lynnwood Dr,0,0,0,1
+2310278,2022-05-24T00:00:00Z,Texas,Uvalde,715 Old Carrizo Rd,21,17,1,0
+2307060,2022-05-19T00:00:00Z,Michigan,Grand Rapids,6230 Kalamazoo Ave SE,0,2,0,0
+2306837,2022-05-19T00:00:00Z,Louisiana,Hammond,800 W University Ave,0,3,0,0
+2306001,2022-05-18T00:00:00Z,Tennessee,Murfreesboro,2650 Middle Tennessee Blvd,1,1,0,0
+2304854,2022-05-17T00:00:00Z,Illinois,Chicago,4140 N Marine Dr,0,1,0,0
+2304209,2022-05-15T00:00:00Z,Illinois,Plainfield,2501 Mirage Ave,0,1,0,0
+2301628,2022-05-13T00:00:00Z,Florida,West Palm Beach,501 S Sapodilla Ave,0,0,1,0
+2300713,2022-05-12T00:00:00Z,Arkansas,Hot Springs National Park,134 Convention Blvd,1,3,0,1
+2300739,2022-05-12T00:00:00Z,Texas,Houston,413 E 13th St,0,1,0,0
+2295031,2022-05-05T00:00:00Z,Ohio,Lowellville,52 Rocket Pl,1,0,0,0
+2292239,2022-05-01T00:00:00Z,Virginia,Manassas,7411 Hoadly Rd,0,2,0,0
+2288193,2022-04-26T00:00:00Z,Michigan,Ishpeming,350 Aspen Ridge School Rd,1,0,0,0
+2285393,2022-04-21T00:00:00Z,North Dakota,Mott,205 Dakota Ave,0,0,1,0
+2281700,2022-04-18T00:00:00Z,Florida,Brandon,3003 S Kings Ave,0,0,0,1
+2271033,2022-04-05T00:00:00Z,Pennsylvania,Erie,3325 Cherry St,0,1,0,0
+2267339,2022-03-31T00:00:00Z,South Carolina,Greenville,44 Merriwoods Dr,1,0,0,0
+2266586,2022-03-30T00:00:00Z,Georgia,Atlanta,45 Whitehouse Dr SW,0,0,0,1
+2266256,2022-03-29T00:00:00Z,Nevada,Las Vegas,4601 W Bonanza Rd,0,0,0,2
+2265705,2022-03-29T00:00:00Z,Illinois,Chicago,4316 S Princeton Ave,0,1,0,0
+2265263,2022-03-28T00:00:00Z,North Carolina,Charlotte,1825 Oakdale Rd,0,2,0,0
+2267073,2022-03-23T00:00:00Z,Arizona,Kingman,W Beale St and Grandview Ave,0,1,0,0
+2256141,2022-03-16T00:00:00Z,California,Riverside,11050 Arlington Ave,0,0,0,0
+2254658,2022-03-15T00:00:00Z,Massachusetts,Boston,9 Peacevale Rd,0,2,0,0
+2255114,2022-03-15T00:00:00Z,Washington,Yakima,611 S 44th Ave,1,1,0,0
+2254548,2022-03-15T00:00:00Z,Maryland,Baltimore,1400 Orleans St,0,1,0,0
+2254175,2022-03-14T00:00:00Z,California,Placentia,645 N Angelina Middle School,1,0,0,0
+2250512,2022-03-09T00:00:00Z,Texas,San Antonio,8400 N Loop 1604 W,0,1,0,0
+2250312,2022-03-09T00:00:00Z,Florida,Miami Gardens,4692 NW 183rd St,0,2,0,0
+2248522,2022-03-07T00:00:00Z,Iowa,Des Moines,815 E 13th St,1,2,0,0
+2246568,2022-03-04T00:00:00Z,Kansas,Olathe,14545 W 127th St,0,2,0,1
+2243833,2022-02-28T00:00:00Z,New York,Brooklyn,1745 Fulton St,0,1,0,0
+2242066,2022-02-25T00:00:00Z,Alabama,Huntsville,2755 Wilson Dr,0,1,0,0
+2239948,2022-02-22T00:00:00Z,Colorado,Pueblo,484 S Maher Dr,0,0,1,0
+2231955,2022-02-11T00:00:00Z,District of Columbia,Washington,3400 Wheeler Rd SE,0,1,0,0
+2230154,2022-02-09T00:00:00Z,Minnesota,Minneapolis,N Girard Ave and N 37th Ave,0,1,0,0
+2230092,2022-02-09T00:00:00Z,New York,Buffalo,1500 Elmwood Ave,0,2,0,0
+2229660,2022-02-08T00:00:00Z,North Carolina,Greensboro,4800 block of Chapel Ridge Dr,0,1,0,0
+2229442,2022-02-08T00:00:00Z,Maryland,Catonsville,421 Bloomsbury Ave,0,1,0,1
+2227008,2022-02-04T00:00:00Z,Alabama,Birmingham,2800 Wilson Rd SW,0,1,0,0
+2227030,2022-02-03T00:00:00Z,Georgia,Decatur,2863 Kelley Chapel Rd,0,0,0,1
+2224372,2022-02-01T00:00:00Z,Pennsylvania,Sharon Hill,300 Calcon Hook Rd,0,0,0,0
+2224788,2022-02-01T00:00:00Z,Wisconsin,Milwaukee,1801 W Olive St,0,5,0,0
+2224205,2022-02-01T00:00:00Z,Minnesota,Minneapolis,7450 Penn Ave S,1,2,0,0
+2222746,2022-01-29T00:00:00Z,Wisconsin,Beloit,1225 4th St,1,0,0,0
+2216656,2022-01-21T00:00:00Z,Maryland,Derwood,5939 Muncaster Mill Rd,0,1,0,0
+2214766,2022-01-19T00:00:00Z,Florida,Sanford,2701 Ridgewood Ave,0,1,0,0
+2214976,2022-01-19T00:00:00Z,Pennsylvania,Pittsburgh,2323 Brighton Rd,1,0,0,0
+2209610,2022-01-11T00:00:00Z,New Mexico,Albuquerque,1505 Candelaria Rd NW,0,0,0,0
+2204018,2022-01-04T00:00:00Z,Illinois,Rockford,5110 Auburn St,0,2,0,0
+2191792,2021-12-16T00:00:00Z,South Carolina,Columbia,4800 Monticello Rd,0,0,0,0
+2189764,2021-12-14T00:00:00Z,Virginia,Newport News,275 Menchville Rd,0,0,1,0
+2188706,2021-12-13T00:00:00Z,North Carolina,Charlotte,2219 Senior Dr,0,0,0,0
+2189244,2021-12-13T00:00:00Z,Florida,Orlando,650 E River Falcons Way,0,0,0,0
+2185315,2021-12-08T00:00:00Z,Missouri,Kansas City,6401 The Paseo Blvd,0,2,0,0
+2183685,2021-12-06T00:00:00Z,California,Wilmington,1500 block of E Denni St,1,2,0,0
+2178487,2021-11-30T00:00:00Z,Michigan,Oxford,745 N Oxford Rd,4,7,0,0
+2179189,2021-11-30T00:00:00Z,Tennessee,Humboldt,2600 Viking Dr,2,1,0,0
+2177903,2021-11-29T00:00:00Z,Missouri,Saint Louis,900 block of N Euclid Ave,0,1,0,0
+2177708,2021-11-29T00:00:00Z,Pennsylvania,Philadelphia,100 block of W Wyoming Ave,1,0,0,0
+2178326,2021-11-29T00:00:00Z,Arizona,Laveen,3921 W Baseline Rd,0,1,0,0
+2176411,2021-11-26T00:00:00Z,California,Campbell,4805 Westmont Ave,0,2,0,0
+2170898,2021-11-19T00:00:00Z,Colorado,Aurora,1250 Chambers Rd,0,3,0,0
+2157523,2021-11-02T00:00:00Z,Georgia,Lawrenceville,Spring Lake Rd,1,0,0,0
+2159517,2021-11-01T00:00:00Z,Mississippi,Madison,200 Crawford St,0,0,0,0
+2156734,2021-10-27T00:00:00Z,South Carolina,Saint Matthews,150 Saints Ave,0,0,0,0
+2150650,2021-10-25T00:00:00Z,Kentucky,Louisville,127 N 39th St,0,1,0,0
+2147910,2021-10-22T00:00:00Z,Pennsylvania,Philadelphia,4300 Westminster Ave,0,0,0,1
+2148080,2021-10-21T00:00:00Z,Georgia,Savannah,9520 Ferguson Ave,0,0,0,0
+2142296,2021-10-15T00:00:00Z,Alabama,Mobile,1621 Virginia St,0,5,0,0
+2139289,2021-10-12T00:00:00Z,Illinois,Chicago,244 E Pershing Rd,0,2,0,0
+2137073,2021-10-08T00:00:00Z,Oklahoma,Comanche,1030 Ash Ave,0,0,0,0
+2135796,2021-10-07T00:00:00Z,Texas,Winnie,234 Buccaneer Dr,0,1,0,0
+2133759,2021-10-06T00:00:00Z,Texas,Arlington,7700 S Watson Rd,0,3,0,0
+2132749,2021-10-04T00:00:00Z,North Dakota,Hettinger,209 8th St S,0,1,0,0
+2129957,2021-10-01T00:00:00Z,Georgia,Rex,3187 Rex Rd,0,0,0,0
+2129897,2021-10-01T00:00:00Z,Texas,Houston,4411 Anderson Rd,0,1,0,0
+2130862,2021-10-01T00:00:00Z,North Carolina,Fayetteville,6830 Raeford Rd,0,2,0,0
+2130386,2021-10-01T00:00:00Z,Indiana,Indianapolis,1200 N Girls School Rd,0,1,0,0
+2130913,2021-10-01T00:00:00Z,North Carolina,Durham,750 Stadium Dr,0,1,0,0
+2129211,2021-09-30T00:00:00Z,Tennessee,Memphis,1037 Cummings St,0,1,0,0
+2129495,2021-09-30T00:00:00Z,Mississippi,Newton,301 W Tatum St,0,1,0,0
+2124936,2021-09-24T00:00:00Z,Alabama,Fairfield,610 Valley Rd,0,1,0,0
+2122316,2021-09-22T00:00:00Z,Kentucky,Louisville,W Chestnut St and Dr W J Hodge St,1,1,0,0
+2122019,2021-09-21T00:00:00Z,Pennsylvania,Philadelphia,2344 W Master St,0,1,0,0
+2122199,2021-09-21T00:00:00Z,Kansas,Wichita,2301 E Douglas Ave,0,3,0,0
+2120470,2021-09-20T00:00:00Z,Virginia,Newport News,5800 Marshall Ave,0,2,0,0
+2118618,2021-09-17T00:00:00Z,North Carolina,Winston Salem,1600 Brewer Rd,0,0,0,0
+2113707,2021-09-10T00:00:00Z,Colorado,Arvada,19500 W 64th Pkwy,0,0,0,0
+2110648,2021-09-07T00:00:00Z,Pennsylvania,Harrisburg,2451 Market St,0,0,0,0
+2108635,2021-09-03T00:00:00Z,Ohio,Euclid,711 E 222nd St,0,0,0,0
+2108090,2021-09-03T00:00:00Z,Nevada,Las Vegas,6600 W Erie Ave,0,0,0,0
+2108540,2021-09-03T00:00:00Z,North Carolina,Charlotte,7600 IBM Dr,0,0,0,0
+2106359,2021-09-02T00:00:00Z,New Mexico,Albuquerque,7701 Candelaria Rd NE,0,1,0,0
+2106338,2021-09-02T00:00:00Z,California,Los Angeles,1921 Maple Ave,0,1,0,0
+2105246,2021-09-01T00:00:00Z,North Carolina,Winston Salem,342 Petree Rd,1,0,0,0
+2103599,2021-08-30T00:00:00Z,North Carolina,Wilmington,1307 Market St,0,1,0,0
+2102082,2021-08-27T00:00:00Z,Pennsylvania,Sharon Hill,300 Calcon Hook Rd,1,4,0,0
+2101841,2021-08-27T00:00:00Z,Virginia,Woodbridge,15201 Neabsco Mills Rd,0,2,0,0
+2101576,2021-08-27T00:00:00Z,Indiana,Hammond,5926 Calumet Ave,0,2,0,0
+2101910,2021-08-27T00:00:00Z,Kentucky,Owensboro,2280 Tamarack Rd,0,0,0,1
+2101949,2021-08-26T00:00:00Z,Ohio,Toledo,3648 Victory Ave,0,0,0,0
+2096613,2021-08-20T00:00:00Z,California,Fresno,4200 N Grantland Ave,0,1,0,0
+2094232,2021-08-18T00:00:00Z,South Carolina,Orangeburg,601 Bruin Dr,0,3,0,0
+2090049,2021-08-13T00:00:00Z,New Mexico,Albuquerque,1101 Park Ave SW,1,0,0,0
+2090818,2021-08-13T00:00:00Z,Georgia,Smyrna,5265 Ward St SE,0,0,0,0
+2089155,2021-08-12T00:00:00Z,Georgia,Lithonia,2440 Phillips Rd,0,0,0,1
+2087851,2021-08-10T00:00:00Z,Ohio,Columbus,2505 Brentnell Blvd,0,1,0,0
+2084681,2021-08-06T00:00:00Z,Louisiana,Houma,300 Verret St,0,1,0,0
