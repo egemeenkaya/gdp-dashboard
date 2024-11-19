@@ -1,151 +1,119 @@
 import streamlit as st
 import pandas as pd
-import math
-from pathlib import Path
+import altair as alt
 
-# Set the title and favicon that appear in the Browser's tab bar.
-st.set_page_config(
-    page_title='GDP dashboard',
-    page_icon=':earth_americas:', # This is an emoji shortcode. Could be a URL too.
+# Load the data
+population_data = pd.read_csv("/data/Population.csv")
+gun_violence_data = pd.read_csv("/data/GunViolenceAllYears.csv")
+high_shooting_data = pd.read_csv("/data/High.csv")
+elementary_shooting_data = pd.read_csv("/data/Elementary.csv")
+
+# Chart 1: Mass Shootings per Million Residents by State
+state_population_data = population_data.rename(columns={'NAME': 'State', 'POPESTIMATE': 'Population'})
+filtered_data = gun_violence_data[gun_violence_data['Victims Killed'] + gun_violence_data['Victims Injured'] >= 4]
+state_incidents = (
+    filtered_data.groupby('State', as_index=False).size().rename(columns={'size': 'Number of Incidents'})
+)
+merged_data = pd.merge(state_incidents, state_population_data, on="State")
+merged_data['Incidents per Million'] = (merged_data['Number of Incidents'] / merged_data['Population']) * 1_000_000
+total_incidents = merged_data['Number of Incidents'].sum()
+total_population = state_population_data['Population'].sum()
+us_average = (total_incidents / total_population) * 1_000_000
+average_row = pd.DataFrame({
+    'State': ['United States Average'],
+    'Number of Incidents': [total_incidents],
+    'Population': [total_population],
+    'Incidents per Million': [us_average]
+})
+merged_data = pd.concat([merged_data, average_row], ignore_index=True)
+
+chart1 = alt.Chart(merged_data).mark_bar().encode(
+    x=alt.X('Incidents per Million:Q', title='Incidents per Million Residents'),
+    y=alt.Y('State:O', sort='-x', title='State'),
+    color=alt.Color('Incidents per Million:Q', scale=alt.Scale(range=['#ffcccc', '#800000'])),
+    tooltip=['State', 'Number of Incidents', 'Population', 'Incidents per Million']
+).properties(
+    title='Mass Shootings per Million Residents by State (2021-2024)',
+    width=300,
+    height=400
 )
 
-# -----------------------------------------------------------------------------
-# Declare some useful functions.
+# Chart 2: Total Mass Shooting and School Shootings per Month
+gun_violence_data['Incident Date'] = pd.to_datetime(gun_violence_data['Incident Date']).dt.tz_localize(None)
+high_shooting_data['Incident Date'] = pd.to_datetime(high_shooting_data['Incident Date']).dt.tz_localize(None)
+elementary_shooting_data['Incident Date'] = pd.to_datetime(elementary_shooting_data['Incident Date']).dt.tz_localize(None)
+school_shooting_data = pd.concat([
+    high_shooting_data[['Incident Date', 'State']],
+    elementary_shooting_data[['Incident Date', 'State']]
+])
+start_date, end_date = pd.Timestamp('2023-01-01'), pd.Timestamp('2024-09-30')
+gun_violence_data = gun_violence_data[(gun_violence_data['Incident Date'] >= start_date) & (gun_violence_data['Incident Date'] <= end_date)]
+school_shooting_data = school_shooting_data[(school_shooting_data['Incident Date'] >= start_date) & (school_shooting_data['Incident Date'] <= end_date)]
+gun_violence_data['Month'] = gun_violence_data['Incident Date'].dt.to_period('M').dt.to_timestamp()
+school_shooting_data['Month'] = school_shooting_data['Incident Date'].dt.to_period('M').dt.to_timestamp()
+gun_violence_monthly = gun_violence_data.groupby('Month').size().reset_index(name='Mass Shootings')
+school_shooting_monthly = school_shooting_data.groupby('Month').size().reset_index(name='School Shootings')
+merged_data = pd.merge(gun_violence_monthly, school_shooting_monthly, on='Month')
 
-@st.cache_data
-def get_gdp_data():
-    """Grab GDP data from a CSV file.
-
-    This uses caching to avoid having to read the file every time. If we were
-    reading from an HTTP endpoint instead of a file, it's a good idea to set
-    a maximum age to the cache with the TTL argument: @st.cache_data(ttl='1d')
-    """
-
-    # Instead of a CSV on disk, you could read from an HTTP endpoint here too.
-    DATA_FILENAME = Path(__file__).parent/'data/gdp_data.csv'
-    raw_gdp_df = pd.read_csv(DATA_FILENAME)
-
-    MIN_YEAR = 1960
-    MAX_YEAR = 2022
-
-    # The data above has columns like:
-    # - Country Name
-    # - Country Code
-    # - [Stuff I don't care about]
-    # - GDP for 1960
-    # - GDP for 1961
-    # - GDP for 1962
-    # - ...
-    # - GDP for 2022
-    #
-    # ...but I want this instead:
-    # - Country Name
-    # - Country Code
-    # - Year
-    # - GDP
-    #
-    # So let's pivot all those year-columns into two: Year and GDP
-    gdp_df = raw_gdp_df.melt(
-        ['Country Code'],
-        [str(x) for x in range(MIN_YEAR, MAX_YEAR + 1)],
-        'Year',
-        'GDP',
-    )
-
-    # Convert years from string to integers
-    gdp_df['Year'] = pd.to_numeric(gdp_df['Year'])
-
-    return gdp_df
-
-gdp_df = get_gdp_data()
-
-# -----------------------------------------------------------------------------
-# Draw the actual page
-
-# Set the title that appears at the top of the page.
-'''
-# :earth_americas: GDP dashboard
-
-Browse GDP data from the [World Bank Open Data](https://data.worldbank.org/) website. As you'll
-notice, the data only goes to 2022 right now, and datapoints for certain years are often missing.
-But it's otherwise a great (and did I mention _free_?) source of data.
-'''
-
-# Add some spacing
-''
-''
-
-min_value = gdp_df['Year'].min()
-max_value = gdp_df['Year'].max()
-
-from_year, to_year = st.slider(
-    'Which years are you interested in?',
-    min_value=min_value,
-    max_value=max_value,
-    value=[min_value, max_value])
-
-countries = gdp_df['Country Code'].unique()
-
-if not len(countries):
-    st.warning("Select at least one country")
-
-selected_countries = st.multiselect(
-    'Which countries would you like to view?',
-    countries,
-    ['DEU', 'FRA', 'GBR', 'BRA', 'MEX', 'JPN'])
-
-''
-''
-''
-
-# Filter the data
-filtered_gdp_df = gdp_df[
-    (gdp_df['Country Code'].isin(selected_countries))
-    & (gdp_df['Year'] <= to_year)
-    & (from_year <= gdp_df['Year'])
-]
-
-st.header('GDP over time', divider='gray')
-
-''
-
-st.line_chart(
-    filtered_gdp_df,
-    x='Year',
-    y='GDP',
-    color='Country Code',
+chart2 = alt.Chart(merged_data).transform_fold(
+    ['Mass Shootings', 'School Shootings'], as_=['Type', 'Count']
+).mark_line().encode(
+    x='Month:T',
+    y='Count:Q',
+    color=alt.Color('Type:N', scale=alt.Scale(domain=['Mass Shootings', 'School Shootings'], range=['red', 'blue'])),
+    tooltip=['Month:T', 'Count:Q', 'Type:N']
+).properties(
+    title='Total Mass Shooting and School Shootings per Month (Jan 2023 - Sep 2024)',
+    width=500,
+    height=300
 )
 
-''
-''
+# Chart 3: Total Mass Shootings per Month
+gun_violence_monthly = gun_violence_data.groupby('Month').size().reset_index(name='Mass Shootings')
 
+chart3 = alt.Chart(gun_violence_monthly).mark_line(color='red').encode(
+    x='Month:T',
+    y='Mass Shootings:Q',
+    tooltip=['Month:T', 'Mass Shootings:Q']
+).properties(
+    title='Total Mass Shootings per Month (2021-2024)',
+    width=500,
+    height=300
+)
 
-first_year = gdp_df[gdp_df['Year'] == from_year]
-last_year = gdp_df[gdp_df['Year'] == to_year]
+# Chart 4: Monthly Mass Shootings (Max State vs US Average)
+monthly_data = gun_violence_data.groupby(['Month', 'State']).size().reset_index(name='Mass Shootings Max')
+max_states = monthly_data.loc[monthly_data.groupby('Month')['Mass Shootings Max'].idxmax()]
+avg_gun_violence = monthly_data.groupby('Month')['Mass Shootings Max'].mean().reset_index(name='Mass Shootings Average')
 
-st.header(f'GDP in {to_year}', divider='gray')
+max_line = alt.Chart(max_states).mark_line(color='red').encode(
+    x='Month:T',
+    y='Mass Shootings Max:Q',
+    tooltip=['Month:T', 'State:N', 'Mass Shootings Max:Q']
+)
 
-''
+avg_line = alt.Chart(avg_gun_violence).mark_line(color='darkred').encode(
+    x='Month:T',
+    y='Mass Shootings Average:Q',
+    tooltip=['Month:T', 'Mass Shootings Average:Q']
+)
 
-cols = st.columns(4)
+chart4 = (max_line + avg_line).properties(
+    title='Monthly Mass Shootings (Max State vs US Average)',
+    width=500,
+    height=300
+)
 
-for i, country in enumerate(selected_countries):
-    col = cols[i % len(cols)]
+# Streamlit Layout
+st.set_page_config(layout="wide")
+st.title("Gun Violence Analysis Dashboard")
 
-    with col:
-        first_gdp = first_year[first_year['Country Code'] == country]['GDP'].iat[0] / 1000000000
-        last_gdp = last_year[last_year['Country Code'] == country]['GDP'].iat[0] / 1000000000
+col1, col2 = st.columns(2)
 
-        if math.isnan(first_gdp):
-            growth = 'n/a'
-            delta_color = 'off'
-        else:
-            growth = f'{last_gdp / first_gdp:,.2f}x'
-            delta_color = 'normal'
+with col1:
+    st.altair_chart(chart1, use_container_width=True)
+    st.altair_chart(chart2, use_container_width=True)
 
-        st.metric(
-            label=f'{country} GDP',
-            value=f'{last_gdp:,.0f}B',
-            delta=growth,
-            delta_color=delta_color
-        )
+with col2:
+    st.altair_chart(chart3, use_container_width=True)
+    st.altair_chart(chart4, use_container_width=True)
