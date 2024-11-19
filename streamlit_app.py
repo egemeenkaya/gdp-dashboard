@@ -58,6 +58,23 @@ gun_violence_monthly = gun_violence_data.groupby('Month').size().reset_index(nam
 school_shooting_monthly = school_shooting_data.groupby('Month').size().reset_index(name='School Shootings')
 merged_data = pd.merge(gun_violence_monthly, school_shooting_monthly, on='Month')
 
+state_totals = gun_violence_data.groupby('State')[['Victims Killed', 'Victims Injured']].sum().reset_index()
+
+state_totals['Total Victims'] = state_totals['Victims Killed'] + state_totals['Victims Injured']
+top_10_states = state_totals.sort_values(by='Total Victims', ascending=False).head(10)
+
+top_10_states_melted = top_10_states.melt(id_vars='State', value_vars=['Victims Killed', 'Victims Injured'], 
+                                          var_name='Type', value_name='Victims')
+
+city_totals = df.groupby('City Or County')[['Victims Killed', 'Victims Injured']].sum().reset_index()
+
+city_totals['Total Victims'] = city_totals['Victims Killed'] + city_totals['Victims Injured']
+top_10_cities = city_totals.sort_values(by='Total Victims', ascending=False).head(10)
+
+top_10_cities_melted = top_10_cities.melt(id_vars='City Or County', value_vars=['Victims Killed', 'Victims Injured'], 
+                                          var_name='Type', value_name='Victims')
+
+
 chart2 = alt.Chart(merged_data).transform_fold(
     ['Mass Shootings', 'School Shootings'], as_=['Type', 'Count']
 ).mark_line().encode(
@@ -107,6 +124,32 @@ chart4 = (max_line + avg_line).properties(
     height=400
 )
 
+chart2_1 = alt.Chart(top_10_states_melted).mark_bar().encode(
+    y=alt.Y('State:N', title='State', sort='-x'),
+    x=alt.X('Victims:Q', title='Number of Victims'),
+    color=alt.Color('Type:N', scale=alt.Scale(domain=['Victims Killed', 'Victims Injured'],
+                                               range=['#8B0000', 'red'])),
+    opacity=alt.Opacity('Type:N', legend=None, scale=alt.Scale(domain=['Victims Killed', 'Victims Injured'],
+                                                               range=[1, 0.7])),
+    order=alt.Order('Type:N', sort='descending'),
+    tooltip=['State:N', 'Type:N', 'Victims:Q']
+).properties(
+    title='Top 10 States with Victims Killed and Injured'
+)
+
+chart2_2 = alt.Chart(top_10_cities_melted).mark_bar().encode(
+    y=alt.Y('City Or County:N', title='City or County', sort='-x'),
+    x=alt.X('Victims:Q', title='Number of Victims'),
+    color=alt.Color('Type:N', scale=alt.Scale(domain=['Victims Killed', 'Victims Injured'],
+                                               range=['#8B0000', 'red'])),
+    opacity=alt.Opacity('Type:N', legend=None, scale=alt.Scale(domain=['Victims Killed', 'Victims Injured'],
+                                                               range=[1, 0.7])),
+    order=alt.Order('Type:N', sort='descending'),
+    tooltip=['City Or County:N', 'Type:N', 'Victims:Q']
+).properties(
+    title='Top 10 Cities or Counties with Victims Killed and Injured'
+)
+
 # Streamlit Layout
 st.set_page_config(layout="wide")
 st.title("Gun Violence Analysis Dashboard")
@@ -123,8 +166,10 @@ with col1:
     st.empty()
     st.empty()
     st.altair_chart(chart1, use_container_width=True)
-    st.altair_chart(chart2, use_container_width=True)
+    st.altair_chart(chart2_1, use_container_width=True)
+    st.altair_chart(chart3, use_container_width=True)
 
 with col2:
-    st.altair_chart(chart3, use_container_width=True)
+    st.altair_chart(chart2, use_container_width=True)
+    st.altair_chart(chart2_2, use_container_width=True)
     st.altair_chart(chart4, use_container_width=True)
