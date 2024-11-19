@@ -130,7 +130,7 @@ chart2_1 = alt.Chart(top_10_states_melted).mark_bar().encode(
     color=alt.Color('Type:N', scale=alt.Scale(domain=['Victims Killed', 'Victims Injured'],
                                                range=['#8B0000', 'red'])),
     opacity=alt.Opacity('Type:N', legend=None, scale=alt.Scale(domain=['Victims Killed', 'Victims Injured'],
-                                                               range=[1, 0.7])),
+                                                               range=[1, 0.5])),
     order=alt.Order('Type:N', sort='descending'),
     tooltip=['State:N', 'Type:N', 'Victims:Q']
 ).properties(
@@ -143,7 +143,7 @@ chart2_2 = alt.Chart(top_10_cities_melted).mark_bar().encode(
     color=alt.Color('Type:N', scale=alt.Scale(domain=['Victims Killed', 'Victims Injured'],
                                                range=['#8B0000', 'red'])),
     opacity=alt.Opacity('Type:N', legend=None, scale=alt.Scale(domain=['Victims Killed', 'Victims Injured'],
-                                                               range=[1, 0.7])),
+                                                               range=[1, 0.5])),
     order=alt.Order('Type:N', sort='descending'),
     tooltip=['City Or County:N', 'Type:N', 'Victims:Q']
 ).properties(
