@@ -27,26 +27,6 @@ average_row = pd.DataFrame({
 })
 merged_data = pd.concat([merged_data, average_row], ignore_index=True)
 
-# Create the slider for selecting the date range
-start_date_slider, end_date_slider = st.slider(
-    "Select Start and End Date for Analysis",
-    min_value=pd.Timestamp('2021-01-01'),
-    max_value=pd.Timestamp('2024-01-01'),
-    value=(pd.Timestamp('2023-01-01'), pd.Timestamp('2023-12-31')),  # Default range
-    format="YYYY-MM-DD"
-)
-
-# Filter the data based on the selected date range
-gun_violence_data_filtered = gun_violence_data[
-    (gun_violence_data['Incident Date'] >= start_date_slider) & 
-    (gun_violence_data['Incident Date'] <= end_date_slider)
-]
-school_shooting_data_filtered = school_shooting_data[
-    (school_shooting_data['Incident Date'] >= start_date_slider) & 
-    (school_shooting_data['Incident Date'] <= end_date_slider)
-]
-
-
 chart1 = alt.Chart(merged_data).mark_bar().encode(
     x=alt.X('Incidents per Million:Q', title='Incidents per Million Residents'),
     y=alt.Y('State:O', sort='-x', title='State'),
