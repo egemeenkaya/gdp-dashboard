@@ -35,7 +35,7 @@ chart1 = alt.Chart(merged_data).mark_bar().encode(
 ).properties(
     title='Mass Shootings per Million Residents by State (2021-2024)',
     width=300,
-    height=400
+    height=300
 )
 
 # Chart 2: Total Mass Shooting and School Shootings per Month
@@ -85,7 +85,7 @@ chart2 = alt.Chart(merged_data).transform_fold(
 ).properties(
     title='Total Mass Shooting and School Shootings per Month (Jan 2023 - Sep 2024)',
     width=500,
-    height=400
+    height=300
 )
 
 # Chart 3: Total Mass Shootings per Month
@@ -98,7 +98,7 @@ chart3 = alt.Chart(gun_violence_monthly).mark_line(color='red').encode(
 ).properties(
     title='Total Mass Shootings per Month (2021-2024)',
     width=500,
-    height=400
+    height=300
 )
 
 # Chart 4: Monthly Mass Shootings (Max State vs US Average)
@@ -121,7 +121,7 @@ avg_line = alt.Chart(avg_gun_violence).mark_line(color='darkred').encode(
 chart4 = (max_line + avg_line).properties(
     title='Monthly Mass Shootings (Max State vs US Average)',
     width=500,
-    height=400
+    height=300
 )
 
 chart2_1 = alt.Chart(top_10_states_melted).mark_bar().encode(
@@ -130,7 +130,7 @@ chart2_1 = alt.Chart(top_10_states_melted).mark_bar().encode(
     color=alt.Color('Type:N', scale=alt.Scale(domain=['Victims Killed', 'Victims Injured'],
                                                range=['#8B0000', 'red'])),
     opacity=alt.Opacity('Type:N', legend=None, scale=alt.Scale(domain=['Victims Killed', 'Victims Injured'],
-                                                               range=[1, 0.5])),
+                                                               range=[1, 0.2])),
     order=alt.Order('Type:N', sort='descending'),
     tooltip=['State:N', 'Type:N', 'Victims:Q']
 ).properties(
@@ -143,7 +143,7 @@ chart2_2 = alt.Chart(top_10_cities_melted).mark_bar().encode(
     color=alt.Color('Type:N', scale=alt.Scale(domain=['Victims Killed', 'Victims Injured'],
                                                range=['#8B0000', 'red'])),
     opacity=alt.Opacity('Type:N', legend=None, scale=alt.Scale(domain=['Victims Killed', 'Victims Injured'],
-                                                               range=[1, 0.5])),
+                                                               range=[1, 0.2])),
     order=alt.Order('Type:N', sort='descending'),
     tooltip=['City Or County:N', 'Type:N', 'Victims:Q']
 ).properties(
