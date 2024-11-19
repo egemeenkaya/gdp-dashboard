@@ -8,6 +8,24 @@ gun_violence_data = pd.read_csv("data/GunViolenceAllYears.csv")
 high_shooting_data = pd.read_csv("data/High.csv")
 elementary_shooting_data = pd.read_csv("data/Elementary.csv")
 
+# Convert date columns to datetime
+gun_violence_data['Incident Date'] = pd.to_datetime(gun_violence_data['Incident Date']).dt.tz_localize(None)
+high_shooting_data['Incident Date'] = pd.to_datetime(high_shooting_data['Incident Date']).dt.tz_localize(None)
+elementary_shooting_data['Incident Date'] = pd.to_datetime(elementary_shooting_data['Incident Date']).dt.tz_localize(None)
+school_shooting_data = pd.concat([
+    high_shooting_data[['Incident Date', 'State']],
+    elementary_shooting_data[['Incident Date', 'State']]
+])
+
+# Set the date range for the slider
+start_date_slider, end_date_slider = st.slider(
+    "Select Start Date for Analysis",
+    min_value=pd.Timestamp('2021-01-01'),
+    max_value=pd.Timestamp('2024-01-01'),
+    value=pd.Timestamp('2023-01-01'),
+    format="YYYY-MM-DD",
+)
+
 # Chart 1: Mass Shootings per Million Residents by State
 state_population_data = population_data.rename(columns={'NAME': 'State', 'POPESTIMATE': 'Population'})
 filtered_data = gun_violence_data[gun_violence_data['Victims Killed'] + gun_violence_data['Victims Injured'] >= 4]
@@ -39,20 +57,14 @@ chart1 = alt.Chart(merged_data).mark_bar().encode(
 )
 
 # Chart 2: Total Mass Shooting and School Shootings per Month
-gun_violence_data['Incident Date'] = pd.to_datetime(gun_violence_data['Incident Date']).dt.tz_localize(None)
-high_shooting_data['Incident Date'] = pd.to_datetime(high_shooting_data['Incident Date']).dt.tz_localize(None)
-elementary_shooting_data['Incident Date'] = pd.to_datetime(elementary_shooting_data['Incident Date']).dt.tz_localize(None)
-school_shooting_data = pd.concat([
-    high_shooting_data[['Incident Date', 'State']],
-    elementary_shooting_data[['Incident Date', 'State']]
-])
-start_date, end_date = pd.Timestamp('2023-01-01'), pd.Timestamp('2024-09-30')
-gun_violence_data = gun_violence_data[(gun_violence_data['Incident Date'] >= start_date) & (gun_violence_data['Incident Date'] <= end_date)]
-school_shooting_data = school_shooting_data[(school_shooting_data['Incident Date'] >= start_date) & (school_shooting_data['Incident Date'] <= end_date)]
-gun_violence_data['Month'] = gun_violence_data['Incident Date'].dt.to_period('M').dt.to_timestamp()
-school_shooting_data['Month'] = school_shooting_data['Incident Date'].dt.to_period('M').dt.to_timestamp()
-gun_violence_monthly = gun_violence_data.groupby('Month').size().reset_index(name='Mass Shootings')
-school_shooting_monthly = school_shooting_data.groupby('Month').size().reset_index(name='School Shootings')
+gun_violence_data_filtered = gun_violence_data[(gun_violence_data['Incident Date'] >= start_date_slider) & (gun_violence_data['Incident Date'] <= end_date_slider)]
+school_shooting_data_filtered = school_shooting_data[(school_shooting_data['Incident Date'] >= start_date_slider) & (school_shooting_data['Incident Date'] <= end_date_slider)]
+
+gun_violence_data_filtered['Month'] = gun_violence_data_filtered['Incident Date'].dt.to_period('M').dt.to_timestamp()
+school_shooting_data_filtered['Month'] = school_shooting_data_filtered['Incident Date'].dt.to_period('M').dt.to_timestamp()
+
+gun_violence_monthly = gun_violence_data_filtered.groupby('Month').size().reset_index(name='Mass Shootings')
+school_shooting_monthly = school_shooting_data_filtered.groupby('Month').size().reset_index(name='School Shootings')
 merged_data = pd.merge(gun_violence_monthly, school_shooting_monthly, on='Month')
 
 chart2 = alt.Chart(merged_data).transform_fold(
@@ -65,11 +77,11 @@ chart2 = alt.Chart(merged_data).transform_fold(
 ).properties(
     title='Total Mass Shooting and School Shootings per Month (Jan 2023 - Sep 2024)',
     width=500,
-    height=400
+    height=300
 )
 
 # Chart 3: Total Mass Shootings per Month
-gun_violence_monthly = gun_violence_data.groupby('Month').size().reset_index(name='Mass Shootings')
+gun_violence_monthly = gun_violence_data_filtered.groupby('Month').size().reset_index(name='Mass Shootings')
 
 chart3 = alt.Chart(gun_violence_monthly).mark_line(color='red').encode(
     x='Month:T',
@@ -78,11 +90,11 @@ chart3 = alt.Chart(gun_violence_monthly).mark_line(color='red').encode(
 ).properties(
     title='Total Mass Shootings per Month (2021-2024)',
     width=500,
-    height=400
+    height=300
 )
 
 # Chart 4: Monthly Mass Shootings (Max State vs US Average)
-monthly_data = gun_violence_data.groupby(['Month', 'State']).size().reset_index(name='Mass Shootings Max')
+monthly_data = gun_violence_data_filtered.groupby(['Month', 'State']).size().reset_index(name='Mass Shootings Max')
 max_states = monthly_data.loc[monthly_data.groupby('Month')['Mass Shootings Max'].idxmax()]
 avg_gun_violence = monthly_data.groupby('Month')['Mass Shootings Max'].mean().reset_index(name='Mass Shootings Average')
 
@@ -101,27 +113,22 @@ avg_line = alt.Chart(avg_gun_violence).mark_line(color='darkred').encode(
 chart4 = (max_line + avg_line).properties(
     title='Monthly Mass Shootings (Max State vs US Average)',
     width=500,
-    height=400
+    height=300
 )
 
 # Streamlit Layout
 st.set_page_config(layout="wide")
 st.title("Gun Violence Analysis Dashboard")
 
+# Create columns for layout
 col1, col2 = st.columns(2)
 
 with col1:
-    st.empty()
-    st.empty()
-    st.empty()
-    st.empty()
-    st.empty()
-    st.empty()
-    st.empty()
-    st.empty()
     st.altair_chart(chart1, use_container_width=True)
+    st.empty()  # Add a spacer to adjust vertical position of chart2
     st.altair_chart(chart2, use_container_width=True)
 
 with col2:
     st.altair_chart(chart3, use_container_width=True)
+    st.empty()  # Add a spacer to adjust vertical position of chart4
     st.altair_chart(chart4, use_container_width=True)
