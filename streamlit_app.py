@@ -115,6 +115,10 @@ with col1:
     st.empty()
     st.empty()
     st.empty()
+    st.empty()
+    st.empty()
+    st.empty()
+    st.empty()
     st.altair_chart(chart1, use_container_width=True)
     st.altair_chart(chart2, use_container_width=True)
 
