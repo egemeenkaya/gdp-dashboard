@@ -66,7 +66,7 @@ top_10_states = state_totals.sort_values(by='Total Victims', ascending=False).he
 top_10_states_melted = top_10_states.melt(id_vars='State', value_vars=['Victims Killed', 'Victims Injured'], 
                                           var_name='Type', value_name='Victims')
 
-city_totals = df.groupby('City Or County')[['Victims Killed', 'Victims Injured']].sum().reset_index()
+city_totals = gun_violence_data.groupby('City Or County')[['Victims Killed', 'Victims Injured']].sum().reset_index()
 
 city_totals['Total Victims'] = city_totals['Victims Killed'] + city_totals['Victims Injured']
 top_10_cities = city_totals.sort_values(by='Total Victims', ascending=False).head(10)
